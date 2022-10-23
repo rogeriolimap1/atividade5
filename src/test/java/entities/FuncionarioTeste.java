@@ -79,15 +79,15 @@ public class FuncionarioTeste {
 
 	@Test
 	//cenário de teste
-	public void testarConstutorHorasTrabalhadasInvalidasAcima(){
+	public void testarConstutorValorHorasTrabalhadasInvalidasAbaixo(){
 		String nomeValido = "Rogerio";
 		int horasTrabalhadasInvalidas = 41;
-		double valorHoraValido = 70;
+		double valorHoraInvalido = 41;
 		boolean resultadoEsperado = true;
 		funcionario f;
 			
 		//execução
-		f = new funcionario(nomeValido, horasTrabalhadasInvalidas, valorHoraValido);
+		f = new funcionario(nomeValido, horasTrabalhadasInvalidas, valorHoraInvalido);
 		String nomeObtido = f.getNome();
 		int horasTrabalhadasObtidas = f.getHorasTrabalhadas();
 		double valorHoraObtido = f.getValorHora();
@@ -96,9 +96,10 @@ public class FuncionarioTeste {
 		//comparação
 		Assertions.assertEquals(nomeValido, nomeObtido);
 		Assertions.assertEquals(horasTrabalhadasInvalidas, horasTrabalhadasObtidas);
-		Assertions.assertEquals(valorHoraValido, valorHoraObtido);
+		Assertions.assertEquals(valorHoraInvalido, valorHoraObtido);
 		Assertions.assertEquals(resultadoEsperado, pagamentoObtido);
 	}
+	
 
 }
 

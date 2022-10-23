@@ -5,9 +5,11 @@ public class funcionario {
 	public static final int HORAS_MAXIMO = 40;
 	public static final double VALORHORA_MAXIMO = 121.20;
 	public static final double VALORHORA_MINIMO = 48.48;
+	public static final double DESPESAS_ADICIONAIS_MAXIMA = 1000;
 	private String nome;
 	private int horasTrabalhadas;
 	private double valorHora;
+	private double despesasAdicionais;
 	private double salario;
 	
 	public funcionario(String nome, int horasTrabalhadas, double valorHora) {
@@ -68,8 +70,16 @@ public class funcionario {
 	public void setValidaHorasTrabalhadas(int horasTrabalhadas){
 		
 		this.horasTrabalhadas = validaHorasTrabalhadas(horasTrabalhadas);
+		
 	}
-
+		
+	public double despesasAdicionais(double despesasAdicioanis){
+		if (despesasAdicionais > DESPESAS_ADICIONAIS_MAXIMA) {
+			throw new IllegalArgumentException("As despesas adicionais não poderão exceder 1000 reais");
+			}
+		return despesasAdicionais;
+		}
+	
 	
 	public String getNome() {
 		return this.nome;
