@@ -70,7 +70,7 @@ public class funcionarioTeceirizadoTeste {
 		funcionarioTerceirizado t;
 	
 		//execução
-		f = new funcionarioTerceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisValida);
+		f = new funcionarioTerceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisValidas);
 		String nomeObtido = t.getNome();
 		int horasTrabalhadasObtidas = t.getHorasTrabalhadas();
 		double valorHoraObtido = t.getValorHora();
@@ -91,12 +91,12 @@ public class funcionarioTeceirizadoTeste {
 		String nomeValido = "Rogerio";
 		int horasTrabalhadasValidas = 40;
 		double valorHoraInvalido = 60;
-		double despesasAdicionaisValidas = 1001;
+		double despesasAdicionaisInvalidas = 1001;
 		boolean salarioEsperado = true;
 		funcionarioTerceirizado t;
 	
 		//execução
-		f = new funcionarioTerceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisValida);
+		f = new funcionarioTerceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisInvalidas);
 		String nomeObtido = t.getNome();
 		int horasTrabalhadasObtidas = t.getHorasTrabalhadas();
 		double valorHoraObtido = t.getValorHora();

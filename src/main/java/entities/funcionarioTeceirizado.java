@@ -1,18 +1,17 @@
 package entities;
 
 public class funcionarioTeceirizado {
-	public class funcionario {
-		public static final double SALARIO_MINIMO = 1212.00;
-		public static final int HORAS_MAXIMO = 40;
-		public static final double VALORHORA_MAXIMO = 121.20;
-		public static final double VALORHORA_MINIMO = 48.48;
-		public static final double DESPESAS_ADICIONAIS_MAXIMA = 1000;
-		private String nome;
-		private int horasTrabalhadas;
-		private double valorHora;
-		private double despesasAdicionais;
-		private double salario;
-		
+	public static final double SALARIO_MINIMO = 1212.00;
+	public static final int HORAS_MAXIMO = 40;
+	public static final double VALORHORA_MAXIMO = 121.20;
+	public static final double VALORHORA_MINIMO = 48.48;
+	public static final double DESPESAS_ADICIONAIS_MAXIMA = 1000;
+	private String nome;
+	private int horasTrabalhadas;
+	private double valorHora;
+	private double despesasAdicionais;
+	private double salario;
+	
 		public void funcionarioTerceirizado(String nome, int horasTrabalhadas, double valorHora, double despesasAdicionais) {
 			if (horasTrabalhadas >= HORAS_MAXIMO) {
 				throw new IllegalArgumentException("O número de horas trabalhadas deverá ser menor ou igual à 40");
@@ -42,7 +41,7 @@ public class funcionarioTeceirizado {
 			this.horasTrabalhadas = horasTrabalhadas;
 		}
 		
-		public void funcionarioTerceirizado(String nome, int horasTrabalhadas, double valorHora, double despesasAdicionais, double salario) {
+		public funcionarioTeceirizado(String nome, int horasTrabalhadas, double valorHora, double despesasAdicionais, double salario) {
 			this.nome = nome;
 			this.horasTrabalhadas = validaHorasTrabalhadas(horasTrabalhadas);
 			this.valorHora = validaValorHorasTrabalhadas(valorHora);
@@ -128,6 +127,5 @@ public class funcionarioTeceirizado {
 		public boolean salarioEsperado(){
 			return (salario >= SALARIO_MINIMO ? true : false);
 		}
-	}
 
 }
