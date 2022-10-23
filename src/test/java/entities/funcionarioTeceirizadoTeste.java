@@ -14,10 +14,10 @@ public class funcionarioTeceirizadoTeste {
 		double valorHoraValido = 48.8;
 		double despesasAdicionaisValidas = 900;
 		boolean salarioEsperado = true;
-		funcionarioTerceirizado t;
+		funcionarioTeceirizado t;
 		
 		//execução
-		t = new funcionarioTerceirizado(nomeValido, horasTrabalhadasValidas, valorHoraValido, despesasAdicionaisValidas);
+		t = new funcionarioTeceirizado(nomeValido, horasTrabalhadasValidas, valorHoraValido, despesasAdicionaisValidas, 0);
 		String nomeObtido = t.getNome();
 		int horasTrabalhadasObtidas = t.getHorasTrabalhadas();
 		double valorHoraObtido = t.getValorHora();
@@ -41,10 +41,10 @@ public class funcionarioTeceirizadoTeste {
 		double valorHoraValido = 48.8;
 		double despesasAdicionaisValidas = 900;
 		boolean salarioEsperado = true;
-		funcionarioTerceirizado t;
+		funcionarioTeceirizado t;
 		
 		//execução
-		t = new funcionarioTerceirizado(nomeValido, horasTrabalhadasInvalidaAcima, valorHoraValido, despesasAdicionaisValidas);
+		t = new funcionarioTeceirizado(nomeValido, horasTrabalhadasInvalidaAcima, valorHoraValido, despesasAdicionaisValidas, 0);
 		String nomeObtido = t.getNome();
 		int horasTrabalhadasObtidas = t.getHorasTrabalhadas();
 		double valorHoraObtido = t.getValorHora();
@@ -67,10 +67,11 @@ public class funcionarioTeceirizadoTeste {
 		double valorHoraInvalido = 35;
 		double despesasAdicionaisValidas = 900;
 		boolean salarioEsperado = true;
-		funcionarioTerceirizado t;
+		funcionarioTeceirizado t;
 	
 		//execução
-		f = new funcionarioTerceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisValidas);
+		
+		t = new funcionarioTeceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisValidas, 0);
 		String nomeObtido = t.getNome();
 		int horasTrabalhadasObtidas = t.getHorasTrabalhadas();
 		double valorHoraObtido = t.getValorHora();
@@ -81,7 +82,7 @@ public class funcionarioTeceirizadoTeste {
 		Assertions.assertEquals(nomeValido, nomeObtido);
 		Assertions.assertEquals(horasTrabalhadasValidas, horasTrabalhadasObtidas);
 		Assertions.assertEquals(valorHoraInvalido, valorHoraObtido);
-		Assertions.assertEquals(despesasAdicionaisValidas, valorHoraObtido);
+		Assertions.assertEquals(despesasAdicionaisValidas, despesasAdicionaisObtidas);
 		Assertions.assertEquals(salarioEsperado, pagamentoObtido1);
 		}
 	
@@ -93,10 +94,10 @@ public class funcionarioTeceirizadoTeste {
 		double valorHoraInvalido = 60;
 		double despesasAdicionaisInvalidas = 1001;
 		boolean salarioEsperado = true;
-		funcionarioTerceirizado t;
+		funcionarioTeceirizado t;
 	
 		//execução
-		f = new funcionarioTerceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisInvalidas);
+		t = new funcionarioTeceirizado(nomeValido, horasTrabalhadasValidas, valorHoraInvalido, despesasAdicionaisInvalidas, 0);
 		String nomeObtido = t.getNome();
 		int horasTrabalhadasObtidas = t.getHorasTrabalhadas();
 		double valorHoraObtido = t.getValorHora();
@@ -107,7 +108,7 @@ public class funcionarioTeceirizadoTeste {
 		Assertions.assertEquals(nomeValido, nomeObtido);
 		Assertions.assertEquals(horasTrabalhadasValidas, horasTrabalhadasObtidas);
 		Assertions.assertEquals(valorHoraInvalido, valorHoraObtido);
-		Assertions.assertEquals(despesasAdicionaisValidas, valorHoraObtido);
+		Assertions.assertEquals(despesasAdicionaisInvalidas, despesasAdicionaisObtidas);
 		Assertions.assertEquals(salarioEsperado, pagamentoObtido);
 		}
 			
